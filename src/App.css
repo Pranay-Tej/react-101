@@ -3,11 +3,7 @@
     grid-template: repeat(2,1fr)/repeat(2,1fr);
 }
 
-.App  div{
-    border: 0.2em solid rgb(96, 170, 240);
-    margin: 0.2em;
-    padding: 0.2em
-}
+.App
 * {
     text-align: center;
 }

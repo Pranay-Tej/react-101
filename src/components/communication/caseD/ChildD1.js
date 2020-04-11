@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Emitter from "../../services/emitter";
+import Emitter from "../../../services/emitter";
 
 function ChildD1() {
     const [childD1Data, setchildD1Data] = useState("");
