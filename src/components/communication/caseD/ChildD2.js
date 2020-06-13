@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import Emitter from "../../../services/emitter";
+import {Emitter, events} from "../../../services/emitter";
 
 
 
@@ -10,13 +10,14 @@ function ChildD2() {
     useEffect(() => {
 
         // subscribing
-        Emitter.on('dataFromChild1ToChild2', (data) => {
+        Emitter.on(events.dataFromChild1ToChild2, (data) => {
             setchildD2Data(data);
+            Emitter.emit(events.confirmationFromChild2);
         });
 
         return () => {
             // unsubscribing on unmount
-            Emitter.off('dataFromChild1ToChild2')
+            Emitter.off(events.dataFromChild1ToChild2)
         }
     }, []);
 
